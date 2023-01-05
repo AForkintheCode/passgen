@@ -4,7 +4,7 @@ var generateBtn = document.querySelector("#generate");
   var upper = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"]
   var lower = ["abcdefghijklmnopqrstuvwxyz"]
   var number = ["1234567890"]
-  var special = ["!@#$%^&*()"]
+  var special = ["!%'()*+,-./:;<=>?@[\]^_`{|}~"]
 
 // Write password to the #password input
 function writePassword() {
@@ -30,6 +30,7 @@ while (length < 8 || length > 128){
 
 console.log("The length of the password is: " + length)
 
+//choose your 
   let bank = []
   let up = window.confirm("Would you like to include upper case letters?") 
   let low = window.confirm("Would you like to include lower case letters?") 
@@ -67,12 +68,9 @@ console.log("The length of the password is: " + length)
   
  
    //iterator
-  var all = ''
-  var max = bank.length
-  var min = 7
+  var all = ''  
   for (i=0; i < length; i++){
-    all += bank[Math.floor((Math.random()*(max-min+1)))]    
-    
+    all += bank[Math.floor((Math.random()*(bank.length)))]      
    }
    console.log("The password is " + all)
   password = all
