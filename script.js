@@ -30,7 +30,7 @@ while (length < 8 || length > 128){
 
 console.log("The length of the password is: " + length)
 
-//choose your 
+//choose your options
   let bank = []
   let up = window.confirm("Would you like to include upper case letters?") 
   let low = window.confirm("Would you like to include lower case letters?") 
